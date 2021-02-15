@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="5"><input type="text" id="result"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="exp" onclick="exp()"></td>
+                <td><input type="button" value="sqrt" onclick="sqrt()"> </td>
+                <td><input type="button" value="log" onclick="log()"></td>
+                <td><input type="button" value="C" onclick="clr()"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="pi" onclick="pi()"></td>
+                <td><input type="button" value="sin" onclick="sin()"></td>
+                <td><input type="button" value="cos" onclick="cos()"></td>
+                <td><input type="button" value="tan" onclick="tan()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="x^2" onclick="square()"></td>
+                <td><input type="button" value="(" onclick="dis('(')"></td>
+                <td><input type="button" value=")" onclick="dis(')')"></td>
+                <td><input type="button" value="+" onclick="dis('+')"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="dis('7')"> </td>
+                <td><input type="button" value="8" onclick="dis('8')"> </td>
+                <td><input type="button" value="9" onclick="dis('9')"> </td>
+                <td><input type="button" value="-" onclick="dis('-')"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="dis('4')"> </td>
+                <td><input type="button" value="5" onclick="dis('5')"> </td>
+                <td><input type="button" value="6" onclick="dis('6')"> </td>
+                <td><input type="button" value="*" onclick="dis('*')"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="dis('1')"> </td>
+                <td><input type="button" value="2" onclick="dis('2')"> </td>
+                <td><input type="button" value="3" onclick="dis('3')"> </td>
+                <td><input type="button" value="/" onclick="dis('/')"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="+/-" onclick="changeSign()"> </td>
+                <td><input type="button" value="0" onclick="dis('0')"> </td>
+                <td><input type="button" value="." onclick="dis('.')"> </td>
+                <td><input type="button" value="=" onclick="solve()"> </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function dis(val) {
+            document.getElementById("result").value += val
+        }
+
+        function solve() {
+            let x = document.getElementById("result").value
+            let y = eval(x)
+            document.getElementById("result").value = y
+        }
+
+        function clr() {
+            document.getElementById("result").value = ""
+        }
+
+        function sin() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.sin(x);
+        }
+
+        function cos() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.cos(x);
+        }
+
+        function tan() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.tan(x);
+        }
+
+        function sqrt() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.sqrt(x);
+        }
+
+        function log() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.log10(x);
+        }
+
+        function square() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.pow(x, 2)
+        }
+
+        function pi() {
+            document.getElementById("result").value = 3.14159265359;
+        }
+
+        function changeSign() {
+            document.getElementById("result").value = "-"
+        }
+
+        function exp() {
+            let x = document.getElementById("result").value
+            document.getElementById("result").value = Math.exp(x)
+        }
+    </script>
+
+</body>
+</html>

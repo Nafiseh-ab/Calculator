@@ -1,0 +1,27 @@
+form {
+    width:455px;
+    padding:25px;
+    margin:auto;
+    border:5px solid #aaa;
+    border-radius:15px 15px;
+}
+
+input[type="button"] {
+    width: 100px;
+    background:#888;
+    color:#fff;
+    font-size:15px;
+    padding:10px 15px;
+    margin:5px;
+    text-align: center;
+}
+
+input[type="text"] {
+    font-size:15px;
+    padding:15px 19px;
+    margin:6px;
+    text-align: right;
+    background-color:white;
+    border-color: black ;
+    width: 88%
+} 
